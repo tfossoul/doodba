@@ -1,4 +1,5 @@
 # See https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml
+
 ./odoo:
     defaults:
         # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
@@ -6,12 +7,24 @@
         # for a sane value of 100 commits)
         depth: $DEPTH_DEFAULT
     remotes:
-        ocb: https://github.com/OCA/OCB.git
         odoo: https://github.com/odoo/odoo.git
-        openupgrade: https://github.com/OCA/OpenUpgrade.git
     target:
-        ocb $ODOO_VERSION
+        odoo $ODOO_VERSION
     merges:
-        - ocb $ODOO_VERSION
+        - odoo $ODOO_VERSION
         # Example of a merge of the PR with the number <PR>
         # - oca refs/pull/<PR>/head
+
+./addons:
+    remotes:
+        coo: https://gitlab.com/coopaname/odoo.git
+    merges:
+        - coo 12.0
+    target: coo 12.0
+
+./queue:
+    remotes:
+        oca: https://github.com/OCA/queue.git
+    merges:
+        - oca 12.0
+    target: oca $ODOO_VERSION

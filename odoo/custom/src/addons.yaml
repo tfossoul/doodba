@@ -1,2 +1,4 @@
+addons:
+  - coopaname_allow_import
 queue:
   - queue_job

@@ -8,19 +8,36 @@
         depth: $DEPTH_DEFAULT
     remotes:
         odoo: https://github.com/odoo/odoo.git
-    target:
-        odoo $ODOO_VERSION
+        ocb: https://github.com/OCA/OCB.git
+        niboo: https://github.com/Niboo/odoo.git
     merges:
-        - odoo $ODOO_VERSION
-        # Example of a merge of the PR with the number <PR>
-        # - oca refs/pull/<PR>/head
+        - ocb 12.0
+    target: ocb 12.0
+
+./enterprise:
+    defaults:
+        depth: $DEPTH_DEFAULT
+    remotes:
+        enterprise: git+ssh://git@gitlab.com/Niboo/enterprise.git
+    merges:
+        - enterprise 12.0
+    target:
+        enterprise 12.0
 
 ./addons:
     remotes:
-        coo: https://gitlab.com/coopaname/odoo.git
+        coo: git+ssh://git@gitlab.com/coopaname/odoo.git
     merges:
         - coo 12.0
     target: coo 12.0
+
+# ./account-analytic:
+#     remotes:
+#         oca: https://github.com/OCA/account-analytic.git
+#         tfossoul: https://github.com/tfossoul/account-analytic.git
+#     merges:
+#         - tfossoul 12.0-mig-account_asset_analytic
+#     target: tfossoul 12.0-mig-account_asset_analytic
 
 ./queue:
     remotes:
@@ -28,3 +45,10 @@
     merges:
         - oca 12.0
     target: oca $ODOO_VERSION
+
+./web:
+    remotes:
+        oca: https://github.com/OCA/web.git
+    merges:
+        - oca 12.0
+    target: oca 12.0

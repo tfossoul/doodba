@@ -4,6 +4,8 @@ enterprise:
   - "*"
 oca/queue:
   - queue_job
+oca/account-reconcile:
+  - account_mass_reconcile
 addons:
   - coopaname_account
   - coopaname_all

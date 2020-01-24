@@ -52,3 +52,10 @@
     merges:
         - oca 12.0
     target: oca 12.0
+
+./oca/account-reconcile:
+    remotes:
+        oca: https://github.com/OCA/account-reconcile.git
+    merges:
+        - oca 12.0
+    target: oca 12.0

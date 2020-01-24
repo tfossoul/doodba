@@ -134,29 +134,29 @@
             },
             "problemMatcher": [],
         },
-        {
-            "label": "Start project in debug mode",
-            "type": "process",
-            "command": "docker-compose",
-            "args": [
-                "up",
-                "-d"
-            ],
-            "options": {
-                "env": {
-                    "DOODBA_PTVSD_ENABLE": "1"
-                }
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false,
-            },
-            "problemMatcher": [],
-        },
+        // {
+        //     "label": "Start project in debug mode",
+        //     "type": "process",
+        //     "command": "docker-compose",
+        //     "args": [
+        //         "up",
+        //         "-d"
+        //     ],
+        //     "options": {
+        //         "env": {
+        //             "DOODBA_PTVSD_ENABLE": "1"
+        //         }
+        //     },
+        //     "presentation": {
+        //         "echo": true,
+        //         "reveal": "silent",
+        //         "focus": false,
+        //         "panel": "shared",
+        //         "showReuseMessage": true,
+        //         "clear": false,
+        //     },
+        //     "problemMatcher": [],
+        // },
         {
             "label": "Stop project",
             "type": "process",

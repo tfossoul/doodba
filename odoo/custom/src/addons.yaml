@@ -2,16 +2,16 @@ odoo:
   - l10n_fr
 enterprise:
   - "*"
-queue:
+oca/queue:
   - queue_job
 addons:
   - coopaname_account
   - coopaname_all
-
+---
 # Enable demo ribbon only for devel and test environments
 ONLY:
   PGDATABASE: # This environment variable must exist and be in the list
-    - devel
-    - test
-web:
+    - coo_dev
+    - coo_staging
+oca/web:
   - web_environment_ribbon

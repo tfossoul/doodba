@@ -7,9 +7,9 @@
         # for a sane value of 100 commits)
         depth: $DEPTH_DEFAULT
     remotes:
-        odoo: https://github.com/odoo/odoo.git
+        # odoo: https://github.com/odoo/odoo.git
         ocb: https://github.com/OCA/OCB.git
-        niboo: https://github.com/Niboo/odoo.git
+        # niboo: https://github.com/Niboo/odoo.git
     merges:
         - ocb 12.0
     target: ocb 12.0
@@ -39,14 +39,14 @@
 #         - tfossoul 12.0-mig-account_asset_analytic
 #     target: tfossoul 12.0-mig-account_asset_analytic
 
-./queue:
+./oca/queue:
     remotes:
         oca: https://github.com/OCA/queue.git
     merges:
         - oca 12.0
     target: oca $ODOO_VERSION
 
-./web:
+./oca/web:
     remotes:
         oca: https://github.com/OCA/web.git
     merges:

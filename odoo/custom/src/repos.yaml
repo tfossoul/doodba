@@ -59,3 +59,16 @@
     merges:
         - oca 12.0
     target: oca 12.0
+
+./oca/partner-contact:
+    remotes:
+        oca: https://github.com/OCA/partner-contact.git
+    merges:
+        - oca 12.0
+    target: oca 12.0
+
+
+
+
+
+

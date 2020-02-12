@@ -1,14 +1,20 @@
 odoo:
   - l10n_fr
+  - account_payment
 enterprise:
   - "*"
 oca/queue:
   - queue_job
 oca/account-reconcile:
   - account_mass_reconcile
+oca/partner-contact:
+  - partner_firstname
 addons:
   - coopaname_account
   - coopaname_all
+  - coopaname_expense
+  - coopaname_expense_amount_ratio
+  - coopaname_portal
 ---
 # Enable demo ribbon only for devel and test environments
 ONLY:
